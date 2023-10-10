@@ -1,39 +1,24 @@
-
 void setup() {
   // put your setup code here, to run once:
- pinMode(13,OUTPUT);
+ pinMode(LED_BUILTIN,OUTPUT);
 
+}
+
+void blinkOnce(int time){
+   digitalWrite(LED_BUILTIN, HIGH);
+ delay(time);
+ digitalWrite(LED_BUILTIN, LOW);
+ delay(time);
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
- digitalWrite(13, 1);
- delay(1000);
- digitalWrite(13, 0);
- delay(500);
- digitalWrite(13, 1);
- delay(1000);
- digitalWrite(13, 0);
- delay(500);
- digitalWrite(13, 1);
- delay(80);
- digitalWrite(13, 0);
- delay(80);
- digitalWrite(13, 1);
- delay(80);
- digitalWrite(13, 0);
- delay(80);
- digitalWrite(13, 1);
- delay(80);
- digitalWrite(13, 0);
- delay(80);
- digitalWrite(13, 1);
- delay(1000);
- digitalWrite(13, 0);
- delay(500);
- digitalWrite(13, 1);
- delay(1000);
- digitalWrite(13, 0);
- delay(500);
- 
-}
+ blinkOnce(1000);
+ blinkOnce(1000);
+ blinkOnce(1000);
+ blinkOnce(500);
+ blinkOnce(500);
+ blinkOnce(500);
+ blinkOnce(1000);
+ blinkOnce(1000);
+ blinkOnce(1000);
+} 
